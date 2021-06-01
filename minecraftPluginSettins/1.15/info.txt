@@ -4,12 +4,14 @@ MOD:
 appleskin
 autofish
 BBOutline
+betterdroppedite(x)
 duarabilityviewer
 fabricapi
 voxelmap
 hwyla
 inventoryprofile
 itemscroller
+litematica(x)
 lithium
 malilib
 minihud
