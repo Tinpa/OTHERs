@@ -8,7 +8,7 @@
   },
   "Generic": {
     "clientPlacementRotation": true,
-    "freeCameraMotionToggle": true,
+    "freeCameraPlayerMovement": false,
     "lavaVisibilityOptifineCompat": true,
     "handRestockPre": false,
     "permanentSneakAllowInGUIs": false,
@@ -19,6 +19,7 @@
     "slotSyncWorkaround": true,
     "snapAimIndicator": true,
     "snapAimPitchOvershoot": false,
+    "zoomAdjustMouseSensitivity": true,
     "breakingRestrictionMode": "line",
     "elytraCameraIndicator": "with_key",
     "placementRestrictionMode": "face",
@@ -32,8 +33,8 @@
     "blockReachDistance": 4.5,
     "breakingGridSize": 3,
     "fastBlockPlacementCount": 2,
-    "fastLeftClickCount": 5,
-    "fastRightClickCount": 5,
+    "fastLeftClickCount": 10,
+    "fastRightClickCount": 10,
     "fillCloneLimit": 10000000,
     "flySpeedPreset1": 0.01,
     "flySpeedPreset2": 0.064,
@@ -46,8 +47,12 @@
     "hotbarSwapOverlayOffsetY": 4,
     "itemSwapDurabilityThreshold": 20,
     "mapPreviewSize": 160,
-    "periodicAttackInterval": 20,
+    "periodicAttackInterval": 25,
     "periodicUseInterval": 20,
+    "periodicHoldAttackDuration": 20,
+    "periodicHoldAttackInterval": 20,
+    "periodicHoldUseDuration": 20,
+    "periodicHoldUseInterval": 20,
     "placementGridSize": 3,
     "placementLimit": 3,
     "potionWarningThreshold": 600,
@@ -263,6 +268,18 @@
         "cancel": true
       }
     },
+    "freeCameraPlayerMovement": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
     "hotbarScroll": {
       "keys": "",
       "settings": {
@@ -324,7 +341,7 @@
       }
     },
     "inventoryPreview": {
-      "keys": "LEFT_ALT",
+      "keys": "",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -372,7 +389,7 @@
       }
     },
     "placementRestrictionModeColumn": {
-      "keys": "",
+      "keys": "Z,3",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -384,7 +401,7 @@
       }
     },
     "placementRestrictionModeDiagonal": {
-      "keys": "",
+      "keys": "Z,5",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -396,7 +413,7 @@
       }
     },
     "placementRestrictionModeFace": {
-      "keys": "",
+      "keys": "Z,2",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -408,7 +425,7 @@
       }
     },
     "placementRestrictionModeLayer": {
-      "keys": "",
+      "keys": "Z,6",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -420,7 +437,7 @@
       }
     },
     "placementRestrictionModeLine": {
-      "keys": "",
+      "keys": "Z,4",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -432,7 +449,7 @@
       }
     },
     "placementRestrictionModePlane": {
-      "keys": "",
+      "keys": "Z,1",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -591,7 +608,7 @@
     "disableObserver": false,
     "disableOffhandRendering": false,
     "disableParticles": false,
-    "disablePortalGuiClosing": false,
+    "disablePortalGuiClosing": true,
     "disableRainEffects": false,
     "disableRenderDistanceFog": false,
     "disableSignGui": false,
@@ -599,7 +616,7 @@
     "disableTileEntityRendering": false,
     "disableTileEntityTicking": false,
     "disableVillagerTradeLocking": false,
-    "disableWallUnsprint": false
+    "disableWallUnsprint": true
   },
   "DisableHotkeys": {
     "disableBlockBreakingParticles": {
@@ -915,7 +932,7 @@
     "tweakBreakingGrid": false,
     "tweakBreakingRestriction": false,
     "tweakChatBackgroundColor": false,
-    "tweakChatPersistentText": true,
+    "tweakChatPersistentText": false,
     "tweakChatTimestamp": true,
     "tweakCommandBlockExtraFields": true,
     "tweakCreativeExtraItems": false,
@@ -923,9 +940,10 @@
     "tweakElytraCamera": false,
     "tweakEmptyShulkerBoxesStack": false,
     "tweakEmptyShulkerBoxesStackOnGround": false,
-    "tweakExplosionReducedParticles": false,
+    "tweakExplosionReducedParticles": true,
     "tweakF3Cursor": false,
     "tweakFakeSneaking": false,
+    "tweakFakeSneakPlacement": false,
     "tweakFastBlockPlacement": false,
     "tweakFastLeftClick": false,
     "tweakFastRightClick": false,
@@ -933,8 +951,7 @@
     "tweakFlySpeed": false,
     "tweakFlexibleBlockPlacement": false,
     "tweakFreeCamera": false,
-    "tweakFreeCameraMotion": false,
-    "tweakGammaOverride": true,
+    "tweakGammaOverride": false,
     "tweakHandRestock": false,
     "tweakHoldAttack": false,
     "tweakHoldUse": false,
@@ -942,13 +959,15 @@
     "tweakHotbarSlotCycle": false,
     "tweakHotbarSlotRandomizer": false,
     "tweakHotbarSwap": false,
-    "tweakInventoryPreview": false,
+    "tweakInventoryPreview": true,
     "tweakItemUnstackingProtection": true,
     "tweakLavaVisibility": true,
     "tweakMapPreview": false,
     "tweakMovementKeysLast": false,
     "tweakPeriodicAttack": false,
     "tweakPeriodicUse": false,
+    "tweakPeriodicHoldAttack": false,
+    "tweakPeriodicHoldUse": false,
     "tweakPermanentSneak": false,
     "tweakPermanentSprint": false,
     "tweakPlacementGrid": false,
@@ -961,9 +980,10 @@
     "tweakPrintDeathCoordinates": true,
     "tweakPickBeforePlace": false,
     "tweakPlayerListAlwaysVisible": false,
-    "tweakRemoveOwnPotionEffects": true,
+    "tweakRemoveOwnPotionEffects": false,
+    "tweakRenderEdgeChunks": false,
     "tweakRenderInvisibleEntities": false,
-    "tweakRenderLimitEntities": false,
+    "tweakRenderLimitEntities": true,
     "tweakRepairMode": false,
     "tweakShulkerBoxDisplay": true,
     "tweakSignCopy": false,
@@ -1242,6 +1262,18 @@
         "cancel": true
       }
     },
+    "tweakFakeSneakPlacement": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
     "tweakFastBlockPlacement": {
       "keys": "",
       "settings": {
@@ -1255,7 +1287,7 @@
       }
     },
     "tweakFastLeftClick": {
-      "keys": "",
+      "keys": "F,L",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1267,7 +1299,7 @@
       }
     },
     "tweakFastRightClick": {
-      "keys": "",
+      "keys": "F,R",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1326,18 +1358,6 @@
         "cancel": true
       }
     },
-    "tweakFreeCameraMotion": {
-      "keys": "",
-      "settings": {
-        "activate_on": "PRESS",
-        "context": "INGAME",
-        "allow_empty": false,
-        "allow_extra_keys": false,
-        "order_sensitive": true,
-        "exclusive": false,
-        "cancel": true
-      }
-    },
     "tweakGammaOverride": {
       "keys": "X,G",
       "settings": {
@@ -1363,7 +1383,7 @@
       }
     },
     "tweakHoldAttack": {
-      "keys": "",
+      "keys": "H,L",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1375,7 +1395,7 @@
       }
     },
     "tweakHoldUse": {
-      "keys": "",
+      "keys": "H,R",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1518,8 +1538,32 @@
         "cancel": true
       }
     },
+    "tweakPeriodicHoldAttack": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "tweakPeriodicHoldUse": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
     "tweakPermanentSneak": {
-      "keys": "H,LEFT_SHIFT",
+      "keys": "",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1651,7 +1695,7 @@
       }
     },
     "tweakPlayerListAlwaysVisible": {
-      "keys": "LEFT_SHIFT,TAB",
+      "keys": "X,TAB",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1663,6 +1707,18 @@
       }
     },
     "tweakRemoveOwnPotionEffects": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "tweakRenderEdgeChunks": {
       "keys": "",
       "settings": {
         "activate_on": "PRESS",
@@ -1699,7 +1755,7 @@
       }
     },
     "tweakRepairMode": {
-      "keys": "LEFT_SHIFT,F",
+      "keys": "",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",
@@ -1807,7 +1863,7 @@
       }
     },
     "tweakToolSwitch": {
-      "keys": "",
+      "keys": "X,T",
       "settings": {
         "activate_on": "PRESS",
         "context": "INGAME",

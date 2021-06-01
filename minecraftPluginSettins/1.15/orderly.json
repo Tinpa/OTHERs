@@ -1,6 +1,6 @@
 {
   "draw": true,
-  "max_distance": 24,
+  "max_distance": 12,
   "render_in_f1": false,
   "health_bar_scale": 1.0,
   "height_above": 0.6,
@@ -20,7 +20,7 @@
   "show_percentage": true,
   "show_on_players": true,
   "show_on_bosses": true,
-  "show_only_focused": false,
+  "show_only_focused": true,
   "enable_debug_info": false,
   "blacklist": [
     "minecraft:cod",
@@ -33,7 +33,7 @@
     "minecraft:shulker"
   ],
   "bosses": [
-    "minecraft:ender_dragon",
-    "minecraft:wither"
+    "minecraft:wither",
+    "minecraft:ender_dragon"
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "ModSettings": {
+    "include_hotbar_modifier": {
+      "main": {
+        "keys": "LEFT_SHIFT"
+      }
+    },
+    "move_all_modifier": {
+      "main": {
+        "keys": "LEFT_ALT"
+      }
+    }
+  }
+}
